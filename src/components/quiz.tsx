@@ -108,13 +108,14 @@ const QuizIntercambio: React.FC<FormPageProps> = ({
     } else setPerguntaAtual(perguntaAtual + 1);
   };
 
+  /*
   const paisMaisPontuado = () => {
     const max = Math.max(...Object.values(contagemPaises));
     return Object.entries(contagemPaises)
       .filter(([_, pontos]) => pontos === max)
       .map(([pais]) => pais);
   };
-
+*/
   return (
     <div>
       {!finalizado ? (
