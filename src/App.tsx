@@ -38,16 +38,12 @@ function App() {
   return (
     <>
       {formulario.resultado == "" ? (
-        <img
-          className="corner-image globe"
-          src="/public/worldwide.png"
-          alt=""
-        />
+        <img className="corner-image globe" src="worldwide.png" alt="" />
       ) : (
         <div></div>
       )}
       <div>
-        <img src="/public/logo.png" className="logo" alt="Vite logo" />
+        <img src="logo.png" className="logo" alt="Vite logo" />
       </div>
 
       {step === 1 && <h1>Descubra qual país combina mais com o seu jeito!</h1>}
@@ -84,7 +80,7 @@ function App() {
       )}
 
       {formulario.resultado == "" ? (
-        <img className="corner-image plane" src="/public/airplane.png" alt="" />
+        <img className="corner-image plane" src="airplane.png" alt="" />
       ) : (
         <div></div>
       )}
