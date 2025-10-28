@@ -41,30 +41,38 @@ const Result: React.FC<ResultProps> = ({ curso, pais }) => {
           <img src="/load.gif" alt="Carregando..." className="loading-image" />
         </div>
       ) : (
-        <div className="exchange-container">
-          <div className="exchange-content">
-            <div className="exchange-text-section">
-              <div dangerouslySetInnerHTML={{ __html: paises[pais as Pais] }} />
+        <div>
+          <div className="exchange-container">
+            <div className="exchange-content">
+              <div className="exchange-text-section">
+                <div
+                  dangerouslySetInnerHTML={{ __html: paises[pais as Pais] }}
+                />
 
-              <p>Para o seu curso, as universidades recomendadas são:</p>
-              {faculdade.map((uni, index) => (
-                <p key={index}>
-                  {" "}
-                  <b>{uni} </b>
-                </p>
-              ))}
-            </div>
+                <p>Para o seu curso, as universidades recomendadas são:</p>
+                {faculdade.map((uni, index) => (
+                  <p key={index}>
+                    {" "}
+                    <b>{uni} </b>
+                  </p>
+                ))}
+              </div>
 
-            <div className="exchange-image-section">
-              <img
-                src={
-                  faculdades[
-                    faculdade[Math.floor(Math.random() * faculdade.length)]
-                  ]
-                }
-              />
+              <div className="exchange-image-section">
+                <img
+                  src={
+                    faculdades[
+                      faculdade[Math.floor(Math.random() * faculdade.length)]
+                    ]
+                  }
+                />
+              </div>
             </div>
           </div>
+          <br />
+          <button onClick={() => window.location.reload()}>
+            FAZER UM NOVO QUIZ
+          </button>
         </div>
       )}
     </React.Fragment>
