@@ -26,7 +26,7 @@ type Quiz = Record<number, Pergunta>;
 
 export const quiz: Quiz = {
   1: {
-    pergunta: "O que mais te inspira ao viver em outro país?",
+    pergunta: "O que mais te inspira na experiência de viver em outro país?",
     opcoes: {
       a: {
         opcao: "Fazer parte de uma comunidade acolhedora.",
